@@ -1,11 +1,11 @@
 <?php
 //Set access token
-$token = 'scTWd2M0Ju06I2mWyCaHoRE4MmZrusX72ig4AHEFu6s';
+$token = 'wZDTnjjpuV3DaTwyoVyQXANogJqzdPIIwJkuihs6W76';
 //Set home URL
 $homeUrl = '/';
 
 // Set The API URL
-$url = 'http://affiliate2/api/lead';
+$url = 'https://affiliate2.fibergateproj.s-host.net/api/lead';
 
 // Create a new cURL resource
 $ch = curl_init($url);

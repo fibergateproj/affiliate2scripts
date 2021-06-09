@@ -2,9 +2,9 @@ $(document).ready(function () {
 	// set form id
 	let formId = '#leadForm';
 	//set access token
-	let token = 'scTWd2M0Ju06I2mWyCaHoRE4MmZrusX72ig4AHEFu6s';
+	let token = 'wZDTnjjpuV3DaTwyoVyQXANogJqzdPIIwJkuihs6W76';
 	// set api endpoint
-	let serverUrl = 'http://affiliate2/api/lead';
+	let serverUrl = 'https://affiliate2.fibergateproj.s-host.net/api/lead';
 	
 	$(formId).on('submit', function ( event ) {
 		// prevent submit
