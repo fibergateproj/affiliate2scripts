@@ -23,9 +23,7 @@
 				<form id="leadForm" action="request.php" method="POST">
 					<?php 
 						foreach($_GET as $key => $val) {
-							if ($key != 'search') {
-								echo '<input type="hidden" name="'.htmlspecialchars($key).'" value="'.htmlspecialchars($val).'" />';
-							}
+							echo '<input type="hidden" name="'.htmlspecialchars($key).'" value="'.htmlspecialchars($val).'" />';
 						}
 					?>
 					<div class="input-group mb-3">
