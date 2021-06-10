@@ -8,58 +8,62 @@
 
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/heroes.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-	<title>Hello, PHP!</title>
+	<title>PHP Script!</title>
 </head>
 
 <body>
-	<div class="text-center">
-		<h1>PHP Script!</h1>
-	</div>
+	<main>
+		<div class="px-4 py-5 my-5 text-center">
+			<img class="d-block mx-auto mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+			<h1 class="display-5 fw-bold">PHP Script!</h1>
+			<div class="col-lg-6 mx-auto">
+				<div class="container">
+					<div class="row">
+						<div class="offset-sm-3 col-6">
+							<form id="leadForm" action="request.php" method="POST">
+								<?php
+								foreach ($_GET as $key => $val) {
+									echo '<input type="hidden" name="' . htmlspecialchars($key) . '" value="' . htmlspecialchars($val) . '" />';
+								}
+								?>
+								<div class="input-group mb-3">
+									<span class="input-group-text" id="inputGroup-sizing-default">test_info</span>
+									<input name="test_info" value="1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div class="input-group mb-3">
+									<span class="input-group-text" id="inputGroup-sizing-default">source_name</span>
+									<input name="source_name" value="2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div class="input-group mb-3">
+									<span class="input-group-text" id="inputGroup-sizing-default">utm_term</span>
+									<input name="utm_term" value="3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div class="input-group mb-3">
+									<span class="input-group-text" id="inputGroup-sizing-default">utm_content</span>
+									<input name="utm_content" value="4" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+								</div>
+								<div>
+									<hr>
+								</div>
+								<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+									<button type="submit" class="btn btn-primary btn-lg px-4 gap-3" id='request'>Send</button>
+									<a href="page_2.html">
+										<button type="button" class="btn btn-outline-secondary btn-lg px-4">JS Script</button>
+									</a>
+								</div>
+							</form>
 
-	<div class="container">
-		<div class="row">
-			<div class="offset-md-4 col-4">
-				<form id="leadForm" action="request.php" method="POST">
-					<?php 
-						foreach($_GET as $key => $val) {
-							echo '<input type="hidden" name="'.htmlspecialchars($key).'" value="'.htmlspecialchars($val).'" />';
-						}
-					?>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">test_info</span>
-						<input name="test_info" value="1" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+						</div>
 					</div>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">source_name</span>
-						<input name="source_name" value="2" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-					</div>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">utm_term</span>
-						<input name="utm_term" value="3" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-					</div>
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">utm_content</span>
-						<input name="utm_content" value="4" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-					</div>
-					<div class="d-flex justify-content-center">
-						<button type="submit" id='request' class="btn btn-primary">Send</button>
-					</div>
-				</form>
-				<div>
-					<hr>
 				</div>
-				<div class="d-flex justify-content-center">
-					<a href="page_2.html">
-						<button type="button" id='request' class="btn btn-info">
-							JS Script
-						</button>
-					</a>
-				</div>
+
 			</div>
 		</div>
-	</div>
-
+	</main>
 	<!-- Optional JavaScript; choose one of the two! -->
 
 	<!-- Option 1: Bootstrap Bundle with Popper -->
